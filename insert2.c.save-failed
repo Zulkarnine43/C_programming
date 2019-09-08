@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+void print();
+ struct node{
+ int data;
+node*next;
+ };
+ node*head=NULL;
+ int main(){
+     int x,i,n;
+     printf("How many data want to input:\n");
+     scanf("%d",&n);
+     printf(" input your Data:\n");
+     scanf("%d",&x);
+
+ node*temp1=new node();
+ temp->data=x;
+ temp->next=NULL;
+ head=temp;
+ for(i=o;i<n;i++){
+    scanf("%d",&x);
+    node*temp=new node();
+ temp->data=x;
+ temp->next=NULL;
+ temp1=head;
+ while(temp1->next!=NULL)
+ {
+   temp1=temp1->next;
+ }
+ temp1->next=temp;
+    print();
+ }
+ }
+ void print();
+ {
+     node*temp=head;
+     while(temp!=NULL){
+        printf("%d",temp->data);
+        printf(" ");
+               temp=temp->data;
+     }
+ }

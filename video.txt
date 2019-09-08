@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main(){
+    int Max[10][10],need[10][10],alloc[10][10],avail[10];
+    int p,j,i,r;
+    printf("Enter the proces:");
+    scanf("%d",&p);
+     printf("\n\nEnter the no of resources : ");
+    scanf("%d", &r);
+     printf("\n\nEnter the Max Matrix for each process : ");
+    for(i = 0; i < p; i++)
+    {
+        printf("\nFor process %d : ", i + 1);
+        for(j = 0; j < r; j++)
+            scanf("%d", &Max[i][j]);
+    }
+    printf("\n\nEnter the allocation for each process : ");
+    for(i = 0; i < p; i++)
+    {
+        printf("\nFor process %d : ",i + 1);
+        for(j = 0; j < r; j++)
+            scanf("%d", &alloc[i][j]);
+    }
+    for(i = 0; i < p; i++){
+            for(j = 0; j < r; j++){
+            need[i][j] = Max[i][j] - alloc[i][j];
+            }
+
+    }
+     for(i = 0; i < p; i++)
+            {
+                for( j = 0; j < r; j++)
+                    printf(" need= %d ", need[i][j]);
+                    }
+                    }

@@ -1,0 +1,9 @@
+SELECT * FROM `account` as a left join loan as l on a.customer_name=l.customer_name;
+SELECT * FROM `account` as a inner join loan as l on a.customer_name=l.customer_name;
+SELECT * FROM `account` as a right join loan as l on a.customer_name=l.customer_name;
+SELECT * FROM `account` NATURAL join loan;
+
+
+SELECT a.`customer_name` FROM account as a left join loan as l on a.customer_name=l.customer_name where loan_number is null;
+SELECT a.`customer_name` FROM account as a left join loan as l on a.customer_name=l.customer_name where loan_number is null or account_number is null;
+
